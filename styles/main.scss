@@ -129,19 +129,16 @@ body {
 }
 
 .main-content {
+     max-width: 935px;
      margin-top: 115px;
      @extend %space-between;
+     align-items: flex-start;
 
      .left-content {
           width: 100%;
-          margin: 0 auto;
           max-width: 614px;
+          margin-left: auto;
           
-          // @media (min-width: 1000px) {
-          //      margin-right: 28px;
-               
-          // }
-
           .stories-container {
                width: 100%;
                padding: 15px 0;
@@ -271,11 +268,107 @@ body {
      
      .right-content {
           display: none;
-          max-width: 300px;
+          width: 300px;
           
           @media (min-width: 1000px) {
                display: block;
                
+          }
+
+          .side-profile {
+               .profile-header {
+                    margin-top: 18px;
+                    margin-bottom: 10px;
+                    @extend %flex-start;
+
+                    .profile-image {
+                         width: 55px;
+                         height: 55px;
+                         overflow: hidden;
+                         border-radius: 50%;
+                         margin-right: 15px;
+
+                         img {
+                              width: 100%;
+                              height: 100%;
+                         }
+                    }
+
+                    .profile-name {
+                         h5 {
+                              font-size: 14px;
+                         }
+                         
+                         p {
+                              font-size: 14px;
+                              color: #8e8e8e;
+                         }
+                    }
+               }
+
+               .sugestions-container {
+                    .suggestions-header {
+                         @extend %space-between;
+
+                         h5 {
+                              font-size: 14px;
+                              color: #8e8e8e;
+                              font-weight: 600;
+                         }
+     
+                         h6 {    
+                              font-size: 12px;
+                              font-weight: 600;
+                         }
+                    }
+
+                    .suggestion {
+                         padding: 10px 0;
+                         @extend %space-between;
+
+                         .left-content {
+                              width: 80%;
+                              @extend %flex-start;
+                              
+                              .image-container {
+                                   width: 32px;
+                                   height: 32px;
+                                   overflow: hidden;
+                                   border-radius: 50%;
+                                   margin-right: 10px;
+
+                                   img {
+                                        width: 100%;
+                                        height: 100%;
+                                   }
+                              }
+                              
+                              .name-container {
+                                   p {
+                                        font-size: 14px;
+                                        font-weight: 600;
+                                   }
+                                   
+                                   span {
+                                        font-size: 12px;
+                                        color: #8e8e8e;
+                                   }
+                              }
+                         }
+
+                         .right-content {
+                              width: 20%;
+                              @extend %flex-end;
+
+                              button {
+                                   border: none;
+                                   font-weight: 600;
+                                   color: #0095f6;
+                                   background: transparent;
+                              }
+                         }
+                    }
+               }
           }
      }
 }

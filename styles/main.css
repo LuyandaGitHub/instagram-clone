@@ -11,7 +11,19 @@
           justify-content: center;
 }
 
-.main-content .left-content .articles-container .article .article-header, .main-content .left-content .articles-container .article .article-description .description-actions {
+.main-content .right-content .side-profile .sugestions-container .suggestion .right-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.main-content .left-content .articles-container .article .article-header, .main-content .left-content .articles-container .article .article-description .description-actions, .main-content .right-content .side-profile .profile-header, .main-content .right-content .side-profile .sugestions-container .suggestion .left-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -23,7 +35,7 @@
           justify-content: flex-start;
 }
 
-.header .header-container, .main-content, .main-content .left-content .stories-container, .main-content .left-content .articles-container .article .article-description .description-container .comments-container .comment {
+.header .header-container, .main-content, .main-content .left-content .stories-container, .main-content .left-content .articles-container .article .article-description .description-container .comments-container .comment, .main-content .right-content .side-profile .sugestions-container .suggestions-header, .main-content .right-content .side-profile .sugestions-container .suggestion {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -121,13 +133,17 @@ body a {
 }
 
 .main-content {
+  max-width: 935px;
   margin-top: 115px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .main-content .left-content {
   width: 100%;
-  margin: 0 auto;
   max-width: 614px;
+  margin-left: auto;
 }
 
 .main-content .left-content .stories-container {
@@ -233,12 +249,92 @@ body a {
 
 .main-content .right-content {
   display: none;
-  max-width: 300px;
+  width: 300px;
 }
 
 @media (min-width: 1000px) {
   .main-content .right-content {
     display: block;
   }
+}
+
+.main-content .right-content .side-profile .profile-header {
+  margin-top: 18px;
+  margin-bottom: 10px;
+}
+
+.main-content .right-content .side-profile .profile-header .profile-image {
+  width: 55px;
+  height: 55px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.main-content .right-content .side-profile .profile-header .profile-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.main-content .right-content .side-profile .profile-header .profile-name h5 {
+  font-size: 14px;
+}
+
+.main-content .right-content .side-profile .profile-header .profile-name p {
+  font-size: 14px;
+  color: #8e8e8e;
+}
+
+.main-content .right-content .side-profile .sugestions-container .suggestions-header h5 {
+  font-size: 14px;
+  color: #8e8e8e;
+  font-weight: 600;
+}
+
+.main-content .right-content .side-profile .sugestions-container .suggestions-header h6 {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.main-content .right-content .side-profile .sugestions-container .suggestion {
+  padding: 10px 0;
+}
+
+.main-content .right-content .side-profile .sugestions-container .suggestion .left-content {
+  width: 80%;
+}
+
+.main-content .right-content .side-profile .sugestions-container .suggestion .left-content .image-container {
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.main-content .right-content .side-profile .sugestions-container .suggestion .left-content .image-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.main-content .right-content .side-profile .sugestions-container .suggestion .left-content .name-container p {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.main-content .right-content .side-profile .sugestions-container .suggestion .left-content .name-container span {
+  font-size: 12px;
+  color: #8e8e8e;
+}
+
+.main-content .right-content .side-profile .sugestions-container .suggestion .right-content {
+  width: 20%;
+}
+
+.main-content .right-content .side-profile .sugestions-container .suggestion .right-content button {
+  border: none;
+  font-weight: 600;
+  color: #0095f6;
+  background: transparent;
 }
 /*# sourceMappingURL=main.css.map */
