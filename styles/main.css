@@ -11,7 +11,7 @@
           justify-content: center;
 }
 
-.main-content .right-content .side-profile .sugestions-container .suggestion .right-content {
+.main-content .right-content .side-profile .profile-sugestions .suggestion .right-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -23,7 +23,7 @@
           justify-content: flex-end;
 }
 
-.main-content .left-content .articles-container .article .article-header, .main-content .left-content .articles-container .article .article-description .description-actions, .main-content .right-content .side-profile .profile-header, .main-content .right-content .side-profile .sugestions-container .suggestion .left-content {
+.main-content .left-content .articles-container .article .article-header, .main-content .left-content .articles-container .article .article-description .description-actions, .main-content .right-content .side-profile .profile-header, .main-content .right-content .side-profile .profile-sugestions .suggestion .left-content, .main-content .right-content .side-profile .profile-footer .footer-nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -35,7 +35,7 @@
           justify-content: flex-start;
 }
 
-.header .header-container, .main-content, .main-content .left-content .stories-container, .main-content .left-content .articles-container .article .article-description .description-container .comments-container .comment, .main-content .right-content .side-profile .sugestions-container .suggestions-header, .main-content .right-content .side-profile .sugestions-container .suggestion {
+.header .header-container, .main-content, .main-content .left-content .stories-container, .main-content .left-content .articles-container .article .article-description .description-container .comments-container .comment, .main-content .right-content .side-profile .profile-sugestions .suggestions-header, .main-content .right-content .side-profile .profile-sugestions .suggestion {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -134,16 +134,20 @@ body a {
 
 .main-content {
   max-width: 935px;
-  margin-top: 115px;
+  margin: 60px auto;
+  position: relative;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
 }
 
 .main-content .left-content {
+  top: 0;
+  left: 0;
   width: 100%;
   max-width: 614px;
   margin-left: auto;
+  position: absolute;
 }
 
 .main-content .left-content .stories-container {
@@ -248,8 +252,11 @@ body a {
 }
 
 .main-content .right-content {
-  display: none;
+  top: 0;
+  right: 0;
   width: 300px;
+  display: none;
+  position: fixed;
 }
 
 @media (min-width: 1000px) {
@@ -285,26 +292,26 @@ body a {
   color: #8e8e8e;
 }
 
-.main-content .right-content .side-profile .sugestions-container .suggestions-header h5 {
+.main-content .right-content .side-profile .profile-sugestions .suggestions-header h5 {
   font-size: 14px;
   color: #8e8e8e;
   font-weight: 600;
 }
 
-.main-content .right-content .side-profile .sugestions-container .suggestions-header h6 {
+.main-content .right-content .side-profile .profile-sugestions .suggestions-header h6 {
   font-size: 12px;
   font-weight: 600;
 }
 
-.main-content .right-content .side-profile .sugestions-container .suggestion {
+.main-content .right-content .side-profile .profile-sugestions .suggestion {
   padding: 10px 0;
 }
 
-.main-content .right-content .side-profile .sugestions-container .suggestion .left-content {
+.main-content .right-content .side-profile .profile-sugestions .suggestion .left-content {
   width: 80%;
 }
 
-.main-content .right-content .side-profile .sugestions-container .suggestion .left-content .image-container {
+.main-content .right-content .side-profile .profile-sugestions .suggestion .left-content .image-container {
   width: 32px;
   height: 32px;
   overflow: hidden;
@@ -312,29 +319,74 @@ body a {
   margin-right: 10px;
 }
 
-.main-content .right-content .side-profile .sugestions-container .suggestion .left-content .image-container img {
+.main-content .right-content .side-profile .profile-sugestions .suggestion .left-content .image-container img {
   width: 100%;
   height: 100%;
 }
 
-.main-content .right-content .side-profile .sugestions-container .suggestion .left-content .name-container p {
+.main-content .right-content .side-profile .profile-sugestions .suggestion .left-content .name-container p {
   font-size: 14px;
   font-weight: 600;
 }
 
-.main-content .right-content .side-profile .sugestions-container .suggestion .left-content .name-container span {
+.main-content .right-content .side-profile .profile-sugestions .suggestion .left-content .name-container span {
   font-size: 12px;
   color: #8e8e8e;
 }
 
-.main-content .right-content .side-profile .sugestions-container .suggestion .right-content {
+.main-content .right-content .side-profile .profile-sugestions .suggestion .right-content {
   width: 20%;
 }
 
-.main-content .right-content .side-profile .sugestions-container .suggestion .right-content button {
+.main-content .right-content .side-profile .profile-sugestions .suggestion .right-content button {
   border: none;
   font-weight: 600;
   color: #0095f6;
   background: transparent;
+}
+
+.main-content .right-content .side-profile .profile-footer .footer-nav {
+  margin-bottom: 15px;
+}
+
+.main-content .right-content .side-profile .profile-footer .footer-nav ul {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style: none;
+}
+
+.main-content .right-content .side-profile .profile-footer .footer-nav ul li {
+  margin: 0 5px;
+  font-size: 11px;
+}
+
+.main-content .right-content .side-profile .profile-footer .footer-nav ul li a {
+  font-size: 11px;
+  color: #c7c7c7;
+  position: relative;
+}
+
+.main-content .right-content .side-profile .profile-footer .footer-nav ul li a::after {
+  top: 50%;
+  width: 2px;
+  right: -5px;
+  height: 2px;
+  content: '\00B7';
+  border-radius: 50%;
+  position: absolute;
+  background: #c7c7c7;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.main-content .right-content .side-profile .profile-footer .footer-nav ul li span {
+  font-size: 11px;
+  color: #c7c7c7;
+}
+
+.main-content .right-content .side-profile .profile-footer .copyright {
+  font-size: 11px;
+  color: #c7c7c7;
+  text-transform: uppercase;
 }
 /*# sourceMappingURL=main.css.map */

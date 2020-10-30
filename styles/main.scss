@@ -130,14 +130,18 @@ body {
 
 .main-content {
      max-width: 935px;
-     margin-top: 115px;
+     margin: 60px auto;
+     position: relative;
      @extend %space-between;
      align-items: flex-start;
 
      .left-content {
+          top: 0;
+          left: 0;
           width: 100%;
           max-width: 614px;
           margin-left: auto;
+          position: absolute;
           
           .stories-container {
                width: 100%;
@@ -267,12 +271,14 @@ body {
      }
      
      .right-content {
-          display: none;
+          top: 0;
+          right: 0;
           width: 300px;
+          display: none;
+          position: fixed;
           
           @media (min-width: 1000px) {
                display: block;
-               
           }
 
           .side-profile {
@@ -306,7 +312,7 @@ body {
                     }
                }
 
-               .sugestions-container {
+               .profile-sugestions {
                     .suggestions-header {
                          @extend %space-between;
 
@@ -367,6 +373,52 @@ body {
                                    background: transparent;
                               }
                          }
+                    }
+               }
+
+               .profile-footer {
+                    .footer-nav {
+                         margin-bottom: 15px;
+
+                         ul {
+                              flex-wrap: wrap;
+                              list-style: none;
+                              @extend %flex-start;
+
+                              li {
+                                   margin: 0 5px;
+                                   font-size: 11px;
+
+                                   a {
+                                        font-size: 11px;
+                                        color: #c7c7c7;
+                                        position: relative;
+
+                                        &::after {
+                                             top: 50%;
+                                             width: 2px;
+                                             right: -5px;
+                                             height: 2px;
+                                             content: '\00B7';
+                                             border-radius: 50%;
+                                             position: absolute;
+                                             background: #c7c7c7;
+                                             transform: translateY(-50%);
+                                        }
+                                   }
+
+                                   span {
+                                        font-size: 11px;
+                                        color: #c7c7c7;     
+                                   }
+                              }
+                         }
+                    }
+
+                    .copyright {
+                         font-size: 11px;
+                         color: #c7c7c7;
+                         text-transform: uppercase;
                     }
                }
           }
